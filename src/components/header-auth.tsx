@@ -1,13 +1,8 @@
 'use client';
 
-import Link from "next/link";
 import
 {
-    Navbar,
-    NavbarBrand,
-    NavbarContent,
     NavbarItem,
-    Input,
     Button,
     Avatar,
     Popover,
@@ -55,7 +50,6 @@ export default function HeaderAuth()
                 </NavbarItem>
                 <NavbarItem>
                     <form action={actions.signIn}>
-
                         <Button type="submit" color="primary" variant="flat">Sign Up</Button>
                     </form>
                 </NavbarItem>
