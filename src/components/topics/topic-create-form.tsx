@@ -12,6 +12,7 @@ import
 } from '@nextui-org/react';
 import * as actions from '@/actions'
 import FormButton from '@/components/common/form-button';
+import ShowErrorMessage from "@/components/common/error-form-message";
 
 export default function TopicCreateForm()
 {
@@ -41,7 +42,7 @@ export default function TopicCreateForm()
                             isInvalid={!!formState.errors.description}
                             errorMessage={formState.errors.description?.join(', ')}
                         />
-                        {formState.errors._form ? <div className='p-2 bg-red-200 border rounded border-red-400 flex justify-center'>{formState.errors._form.join(', ')}</div> : null}
+                        {formState.errors._form ? <ShowErrorMessage message={formState.errors._form.join(', ')}/> : null}
                         <div className='flex gap-2 justify-center'>
                             <FormButton>
                                 Save
