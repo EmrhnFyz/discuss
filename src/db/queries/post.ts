@@ -2,7 +2,7 @@ import type { Post } from "@prisma/client";
 import { db } from "@/db";
 
 
-type PostWithData = (
+export type PostForListDisplay = (
     Post & {
         topic: { slug: string };
         user: { name: string | null };
@@ -10,14 +10,14 @@ type PostWithData = (
     }
 )
 
-export function fetchPostsByTopicSlug(slug: string): Promise<PostWithData[]>
+export function fetchPostsByTopicSlug(slug: string): Promise<PostForListDisplay[]>
 {
     return db.post.findMany({
         where: { topic: { slug } },
-        include:{
-            topic: {select:{slug:true}},
-            user: {select:{name:true}},
-            _count:{select:{comments:true}}
+        include: {
+            topic: { select: { slug: true } },
+            user: { select: { name: true } },
+            _count: { select: { comments: true } }
         }
     })
 }
