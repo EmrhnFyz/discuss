@@ -17,7 +17,7 @@ export default async function PostShow({ postId }: PostShowProps)
     notFound();
   }
   const userData = await db.user.findFirst({
-    where: {id: post.userId}
+    where: { id: post.userId }
   })
 
   return (

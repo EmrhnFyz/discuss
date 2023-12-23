@@ -24,7 +24,7 @@ export default function Header()
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent className="justify-end">
-                <HeaderAuth/>
+                <HeaderAuth />
             </NavbarContent>
         </Navbar>
     )

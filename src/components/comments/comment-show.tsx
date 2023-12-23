@@ -39,9 +39,14 @@ export default async function CommentShow({ commentId, comments }: CommentShowPr
           className="w-10 h-10 rounded-full"
         />
         <div className="flex-1 space-y-3">
-          <p className="text-sm font-medium text-gray-500">
-            {comment.user.name}
-          </p>
+          <div className="flex items-baseline gap-2">
+            <p className="text-sm font-medium text-gray-500">
+              {comment.user.name}
+            </p>
+            <p className="text-xs italic">
+              {comment.createdAt.toUTCString()}
+            </p>
+          </div>
           <p className="text-gray-900">{comment.content}</p>
 
           <CommentCreateForm postId={comment.postId} parentId={comment.id} />
