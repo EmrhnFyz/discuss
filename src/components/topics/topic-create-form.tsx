@@ -42,7 +42,7 @@ export default function TopicCreateForm()
                             isInvalid={!!formState.errors.description}
                             errorMessage={formState.errors.description?.join(', ')}
                         />
-                        {formState.errors._form ? <ShowErrorMessage message={formState.errors._form.join(', ')}/> : null}
+                        {formState.errors._form ? <ShowErrorMessage message={formState.errors._form.join(', ')} /> : null}
                         <div className='flex gap-2 justify-center'>
                             <FormButton>
                                 Save

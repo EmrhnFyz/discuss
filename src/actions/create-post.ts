@@ -1,4 +1,5 @@
 'use server';
+
 import type { Post } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";

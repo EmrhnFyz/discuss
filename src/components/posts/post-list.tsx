@@ -1,4 +1,3 @@
-import type { Post, User, Topic } from '@prisma/client';
 import Link from 'next/link';
 import paths from '@/paths';
 import type { PostForListDisplay } from '@/db/queries/post'

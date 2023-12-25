@@ -9,7 +9,7 @@ import
 import HeaderAuth from "@/components/header-auth";
 import React from "react";
 import SearchInput from "@/components/search-input";
-
+import { Suspense } from "react";
 export default function Header()
 {
 
@@ -20,7 +20,9 @@ export default function Header()
             </NavbarBrand>
             <NavbarContent justify="center">
                 <NavbarItem>
-                    <SearchInput />
+                    <Suspense>
+                        <SearchInput />
+                    </Suspense>
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">

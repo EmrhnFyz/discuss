@@ -2,6 +2,7 @@
 
 import { NextUIProvider } from "@nextui-org/react";
 import { SessionProvider } from 'next-auth/react';
+
 interface ProvidersProps
 {
     children: React.ReactNode

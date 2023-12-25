@@ -1,7 +1,6 @@
 import type { Post } from "@prisma/client";
 import { db } from "@/db";
 
-
 export type PostForListDisplay = (
     Post & {
         topic: { slug: string };

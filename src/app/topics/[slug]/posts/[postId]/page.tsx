@@ -5,6 +5,7 @@ import CommentCreateForm from "@/components/comments/comment-create-form";
 import paths from "@/paths";
 import PostShowLoading from "@/components/posts/post-show-loading";
 import { Suspense } from "react";
+
 interface PostShowPageProps
 {
   params: {

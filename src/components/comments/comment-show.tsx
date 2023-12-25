@@ -1,6 +1,5 @@
 import Image from "next/image";
 import CommentCreateForm from "@/components/comments/comment-create-form";
-import { notFound } from "next/navigation";
 import { fetchCommentsByPostId } from "@/db/queries/comments";
 
 interface CommentShowProps
