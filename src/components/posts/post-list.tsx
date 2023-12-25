@@ -30,6 +30,7 @@ export default async function PostList({ fetchData }: PostListProps)
             <p className="text-xs text-gray-400">
               {post._count.comments} comments
             </p>
+            <p className='text-xs text-gray-400'>{post.createdAt.toUTCString()}</p>
           </div>
         </Link>
       </div>

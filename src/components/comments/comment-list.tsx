@@ -18,7 +18,7 @@ export default async function CommentList({ postId }: CommentListProps)
       <CommentShow
         key={comment.id}
         commentId={comment.id}
-        comments={comments}
+        postId={postId}
       />
     );
   });
